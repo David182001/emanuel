@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-title>welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<button ion-button menuClose>Close Menu</button>
+<ion-list>
+
+  <ion-item>
+    <ion-label>Pepperoni</ion-label>
+    <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Sausage</ion-label>
+    <ion-toggle [(ngModel)]="sausage" disabled="true"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mushrooms</ion-label>
+    <ion-toggle [(ngModel)]="mushrooms"></ion-toggle>
+  </ion-item>
+
+</ion-list>
+<ion-spinner name="bubbles"></ion-spinner>
+<ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list radio-group [(ngModel)]="autoManufacturers">
+
+  <ion-list-header>
+    Auto Manufacturers
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Cord</ion-label>
+    <ion-radio value="cord"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Duesenberg</ion-label>
+    <ion-radio value="duesenberg"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Hudson</ion-label>
+    <ion-radio value="hudson"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Packard</ion-label>
+    <ion-radio value="packard"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Studebaker</ion-label>
+    <ion-radio value="studebaker"></ion-radio>
+  </ion-item>
+
+</ion-list>
+
+ <button ion-button navPop>Go Back</button>
+  <button ion-button navPop>Go Back</button>
+   <button ion-button navPop>Go Back</button>
+    <button ion-button navPop>Go Back</button>
+     <button ion-button navPop>Go Back</button>
+      <button ion-button navPop>Go Back</button>
+
+      
+  <h2>Welcome to Ionic!</h2>
+  <p>
+    This starter project comes with simple tabs-based layout for apps
+    that are going to primarily use a Tabbed UI.
+  </p>
+  <p>
+    Take a look at the <code>src/pages/</code> directory to add or change tabs,
+    update any existing page or create new pages.
+  </p>
+</ion-content>
